@@ -78,11 +78,9 @@ export const createTitleFromMessage = (message, maxLength = 50) => {
 
 export const generateTempId = () => 'temp_' + Date.now();
 
-export const processImagePath = (src, apiBaseUrl = import.meta.env.VITE_API_BASE_URL) => {
-  const baseUrl = apiBaseUrl ||
-    import.meta.env.VITE_API_BASE_URL ||
-    'https://linhha2705-backend.hf.space/api';
-    
+export const processImagePath = (src, apiBaseUrl) => {
+  const baseUrl = 'https://linhha2705-backend.hf.space/api';
+
   if (!src) return null;
 
   if (src.includes('../figures/')) {
@@ -93,7 +91,7 @@ export const processImagePath = (src, apiBaseUrl = import.meta.env.VITE_API_BASE
     if (baiMatch) {
       baiId = baiMatch[1];
     }
-    return `${apiBaseUrl}/figures/${baiId}/${fileName}`;
+    return `${baseUrl}/figures/${baiId}/${fileName}`;
   } else {
     const fileName = src.split('/').pop();
     let baiId = 'bai1';
@@ -101,7 +99,7 @@ export const processImagePath = (src, apiBaseUrl = import.meta.env.VITE_API_BASE
     if (baiMatch) {
       baiId = baiMatch[1];
     }
-    return `${apiBaseUrl}/figures/${baiId}/${fileName}`;
+    return `${baseUrl}/figures/${baiId}/${fileName}`;
   }
 };
 
