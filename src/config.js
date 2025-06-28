@@ -39,4 +39,10 @@ const config = {
   }
 };
 
+console.log('🔧 Config Debug:', {
+  VITE_API_BASE_URL: import.meta.env.VITE_API_BASE_URL,
+  finalApiBaseUrl: config.apiBaseUrl,
+  allEnvVars: import.meta.env
+});
+
 export default config;
