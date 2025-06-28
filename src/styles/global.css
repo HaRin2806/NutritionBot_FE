@@ -1,0 +1,92 @@
+@import './components.css';
+@import './markdown.css';
+@import './chat.css';
+
+/* CSS Variables */
+:root {
+  --color-primary: #36B37E;
+  --color-primary-light: #E6F7EF;
+  --color-primary-dark: #2FAB76;
+}
+
+/* Base styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode */
+.dark {
+  --color-primary: #36B37E;
+  --color-primary-light: #E6F7EF;
+  --color-primary-dark: #2FAB76;
+}
+
+.dark body {
+  color: #e5e7eb;
+  background-color: #111827;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5e0d5;
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* SweetAlert2 custom styles */
+.swal-simple-popup {
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1) !important;
+  font-family: inherit !important;
+}
+
+.swal-simple-button {
+  border-radius: 0.5rem !important;
+  font-weight: 500 !important;
+  padding: 0.625rem 1.25rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.swal-simple-button:hover {
+  transform: translateY(-1px) !important;
+}
+
+.swal-simple-cancel {
+  background: #f3f4f6 !important;
+  color: #4b5563 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+.dark .swal-simple-cancel {
+  background: #374151 !important;
+  color: #d1d5db !important;
+  border-color: #4b5563 !important;
+}

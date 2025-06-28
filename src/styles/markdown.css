@@ -1,0 +1,244 @@
+/* Định dạng cơ bản cho nội dung markdown */
+.markdown-content {
+  line-height: 1.6;
+  color: #333;
+}
+
+.markdown-content.dark {
+  color: #e5e7eb;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.markdown-content.dark h1,
+.markdown-content.dark h2,
+.markdown-content.dark h3,
+.markdown-content.dark h4,
+.markdown-content.dark h5,
+.markdown-content.dark h6 {
+  color: #f3f4f6;
+}
+
+.markdown-content h1 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.markdown-content.dark h1 {
+  border-bottom-color: #4b5563;
+}
+
+.markdown-content h2 {
+  font-size: 1.3rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.2rem;
+}
+
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-size: 1.1rem;
+}
+
+.markdown-content p {
+  margin-bottom: 1rem;
+}
+
+/* Định dạng cho danh sách */
+.markdown-content ul,
+.markdown-content ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-content ul {
+  list-style-type: disc;
+}
+
+.markdown-content ol {
+  list-style-type: decimal;
+}
+
+.markdown-content li {
+  margin-bottom: 0.25rem;
+}
+
+/* Định dạng cho bảng */
+.markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.markdown-content table th {
+  background-color: #E8F5F0;
+  color: #1F6A4C;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border: 1px solid #BBEADD;
+}
+
+.markdown-content.dark table th {
+  background-color: #374151;
+  color: #86efac;
+  border-color: #4b5563;
+}
+
+.markdown-content table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  vertical-align: top;
+}
+
+.markdown-content.dark table td {
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.markdown-content table tr:nth-child(even) {
+  background-color: #F9FFFC;
+}
+
+.markdown-content.dark table tr:nth-child(even) {
+  background-color: #1f2937;
+}
+
+.markdown-content table tr:hover {
+  background-color: #F0FFF8;
+}
+
+.markdown-content.dark table tr:hover {
+  background-color: #374151;
+}
+
+/* Định dạng cho khối code */
+.markdown-content pre {
+  background-color: #1E1E1E;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.markdown-content code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.markdown-content p code,
+.markdown-content li code {
+  background-color: #EFF6FF;
+  color: #2563EB;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.markdown-content.dark p code,
+.markdown-content.dark li code {
+  background-color: #374151;
+  color: #93c5fd;
+}
+
+/* Định dạng cho trích dẫn */
+.markdown-content blockquote {
+  border-left: 4px solid #36B37E;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #4B5563;
+  font-style: italic;
+  background-color: #F7FFFA;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.markdown-content.dark blockquote {
+  background-color: #1f2937;
+  color: #9ca3af;
+  border-left-color: #86efac;
+}
+
+/* Định dạng cho hình ảnh */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-content.dark img {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Định dạng cho liên kết */
+.markdown-content a {
+  color: #36B37E;
+  text-decoration: none;
+}
+
+.markdown-content.dark a {
+  color: #86efac;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Định dạng cho đường kẻ ngang */
+.markdown-content hr {
+  border: 0;
+  border-top: 1px solid #E5E7EB;
+  margin: 1.5rem 0;
+}
+
+.markdown-content.dark hr {
+  border-top-color: #4b5563;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .markdown-content h1 {
+    font-size: 1.3rem;
+  }
+  
+  .markdown-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .markdown-content h3,
+  .markdown-content h4,
+  .markdown-content h5,
+  .markdown-content h6 {
+    font-size: 1.1rem;
+  }
+  
+  .markdown-content p {
+    font-size: 0.95rem;
+  }
+  
+  .markdown-content table {
+    font-size: 0.85rem;
+  }
+  
+  .markdown-content table th,
+  .markdown-content table td {
+    padding: 0.5rem;
+  }
+}
