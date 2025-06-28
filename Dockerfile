@@ -1,16 +1,21 @@
-# Step 1: Build the Vite React app
+# Dockerfile
 FROM node:23 AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
-RUN chmod +x node_modules/.bin/vite
 RUN npm run build
-# Step 2: Serve the production build with nginx
+
+# Step 2: Serve with nginx
 FROM nginx:alpine
-# Copy Vite's build output (dist folder) to nginx web root
+
+# Copy build output
 COPY --from=build /app/dist /usr/share/nginx/html
-# Copy nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+
+# Copy nginx config as template
+COPY nginx.conf /etc/nginx/templates/default.conf.template
+
+# Expose the PORT environment variable (Railway sẽ set giá trị này)
+EXPOSE $PORT
+
 CMD ["nginx", "-g", "daemon off;"]
