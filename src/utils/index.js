@@ -79,7 +79,10 @@ export const createTitleFromMessage = (message, maxLength = 50) => {
 export const generateTempId = () => 'temp_' + Date.now();
 
 export const processImagePath = (src, apiBaseUrl = import.meta.env.VITE_API_BASE_URL) => {
-  console.log('Processing image:', { src, apiBaseUrl }); // DEBUG
+  const baseUrl = apiBaseUrl ||
+    import.meta.env.VITE_API_BASE_URL ||
+    'https://linhha2705-backend.hf.space/api';
+    
   if (!src) return null;
 
   if (src.includes('../figures/')) {
