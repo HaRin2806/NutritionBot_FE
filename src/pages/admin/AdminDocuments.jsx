@@ -530,14 +530,14 @@ const processImagePath = (src) => {
         const filename = src.split('\\').pop();
         const baiMatch = filename.match(/^(bai\d+)_/);
         const baiId = baiMatch ? baiMatch[1] : 'bai1';
-        return `http://localhost:5000/api/figures/${baiId}/${filename}`;
+        return `${import.meta.env.VITE_API_BASE_URL}/figures/${baiId}/${filename}`;
     }
     
     if (src.startsWith('../figures/')) {
         const filename = src.split('../figures/')[1];
         const baiMatch = filename.match(/^(bai\d+)_/);
         const baiId = baiMatch ? baiMatch[1] : 'bai1';
-        return `http://localhost:5000/api/figures/${baiId}/${filename}`;
+        return `${import.meta.env.VITE_API_BASE_URL}/figures/${baiId}/${filename}`;
     }
     
     return src;

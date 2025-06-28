@@ -78,7 +78,7 @@ export const createTitleFromMessage = (message, maxLength = 50) => {
 
 export const generateTempId = () => 'temp_' + Date.now();
 
-export const processImagePath = (src, apiBaseUrl = 'http://localhost:5000/api') => {
+export const processImagePath = (src, apiBaseUrl = import.meta.env.VITE_API_BASE_URL) => {
   if (!src) return null;
 
   if (src.includes('../figures/')) {
