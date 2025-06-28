@@ -1,7 +1,7 @@
 // Cấu hình toàn cục cho ứng dụng
 const config = {
   // API URLs
-  apiBaseUrl: import.meta.env.VITE_API_BASE_URL,
+  apiBaseUrl: import.meta.env.VITE_API_BASE_URL || 'https://linhha2705-backend.hf.space/api',
   
   // Các tùy chọn mặc định
   defaultPageSize: 10,
